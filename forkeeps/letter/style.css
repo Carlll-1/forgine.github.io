@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2e8ff;
+    /* Light violet background */
+    font-family: 'Indie Flower', cursive;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background-color: #f9f0ff;
+    /* Light violet background for container */
+    padding: 50px;
+    border-radius: 20px;
+    border: 3px solid #b49bd7;
+    /* Light violet border */
+    box-shadow: 0 8px 20px rgba(180, 155, 215, 0.3);
+    /* Light violet shadow */
+    max-width: 400px;
+    width: 90%;
+}
+
+.header_text {
+    font-size: 48px;
+    /* Larger header font size */
+    color: #b49bd7;
+    /* Light violet header color */
+    margin-bottom: 30px;
+    /* More space between header and content */
+    text-shadow: 2px 2px 4px rgba(180, 155, 215, 0.2);
+    /* Light shadow */
+}
+
+.gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 18px 36px;
+    /* Larger padding for bigger buttons */
+    font-size: 28px;
+    /* Larger font size */
+    border: 2px solid #b49bd7;
+    /* Light violet button border */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #b49bd7;
+    /* Light violet button background */
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    box-shadow: 0 4px 10px rgba(180, 155, 215, 0.3);
+    /* Light violet shadow */
+}
+
+.btn:hover {
+    background-color: white;
+    color: #b49bd7;
+    /* Light violet text on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(180, 155, 215, 0.4);
+}
+
+#noButton {
+    background-color: #c4a1e2;
+    /* Slightly darker light violet */
+    border-color: #c4a1e2;
+    /* Same as the background color */
+}
+
+#noButton:hover {
+    background-color: white;
+    color: #c4a1e2;
+    /* Darker violet text on hover */
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.wiggle {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes heartFade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 30px;
+    /* Larger heart size */
+    height: 30px;
+    /* Larger heart size */
+    background-color: #b49bd7;
+    /* Light violet heart color */
+    transform: translate(-50%, -50%);
+    animation: heartFade 1s ease-out forwards;
+    border-radius: 50%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 40px;
+        max-width: 100%;
+    }
+
+    .header_text {
+        font-size: 40px;
+        /* Larger header for mobile */
+    }
+
+    .btn {
+        padding: 20px 40px;
+        /* Even larger button padding */
+        font-size: 32px;
+        /* Even larger button text */
+    }
+
+    .gif_container img {
+        max-width: 90%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 30px;
+        /* Increased gap between buttons */
+    }
+}

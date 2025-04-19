@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yay!</title>
+    <link rel="stylesheet" href="yesStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header_text">Yay! Let's go on a date! 💖</h1>
+
+        <div class="gif_container">
+            <img src="https://media.tenor.com/YTw87WdiaasAAAAi/tkthao219-capoo.gif" alt="Capoo excited">
+        </div>
+
+        <div class="details">
+            <p><strong>📅 When:</strong> April 23, 2025 — right after your class</p>
+            <p><strong>🍛 Where:</strong> Biryani Date (exact place is a surprise!)</p>
+            <p><strong>💖 Promise:</strong> I’ll take care of you and make sure you get home safe. Always. 🥹</p>
+        </div>
+
+        <a href="index.html" class="back_btn">← Back to the question</a>
+    </div>
+
+    <!-- Heart effect on click -->
+    <script>
+        document.body.addEventListener('click', function (e) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.style.left = `${e.clientX}px`;
+            heart.style.top = `${e.clientY}px`;
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 1000);
+        });
+    </script>
+</body>
+
+</html>
