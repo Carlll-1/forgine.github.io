@@ -1,12 +1,10 @@
-/* Define colors */
 :root {
-    --primary-color: #9b7aff;
-    --accent-color: #ffb3c1;
-    --bg-color: #f1e4f9;
-    --text-color: #2c2c2c;
+    --primary-color: #9CAF88;
+    --accent-color: #D9E4CC;
+    --bg-color: #f4f1e1;
+    --text-color: #2f2f2f;
 }
 
-/* Overall body styles */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -15,59 +13,55 @@ body {
     padding: 0;
 }
 
-/* Elegant Love Button */
 .btn-love {
-    background: linear-gradient(135deg, #9b7aff, #ffb3c1);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: #fff;
     border: none;
-    padding: 0.9rem 1.7rem;
+    padding: 0.9rem 1.8rem;
     font-weight: 600;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(155, 122, 255, 0.3);
-    transition: all 0.35s ease;
     font-size: 1.1rem;
-    letter-spacing: 0.5px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(156, 175, 136, 0.3);
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.4px;
 }
 
 .btn-love:hover {
-    background: linear-gradient(135deg, #8a4dff, #ff8fa3);
+    background: linear-gradient(135deg, #8d9f7c, #c8d9b9);
     transform: scale(1.07);
-    box-shadow: 0 12px 24px rgba(138, 77, 255, 0.4);
+    box-shadow: 0 12px 28px rgba(140, 160, 110, 0.4);
 }
 
 .btn-love:active {
     transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(127, 67, 227, 0.4);
+    box-shadow: 0 6px 14px rgba(110, 130, 90, 0.4);
 }
 
-/* Secondary button styles */
 .btn-secondary {
-    background-color: #d1a7ff;
-    color: white;
+    background-color: #CED9C5;
+    color: #2f2f2f;
     border: none;
     padding: 0.8rem 1.5rem;
     font-weight: bold;
-    border-radius: 12px;
+    border-radius: 14px;
     transition: all 0.3s ease-in-out;
 }
 
 .btn-secondary:hover {
-    background-color: #b38dff;
+    background-color: #BACBA8;
     transform: scale(1.05);
 }
 
 .btn-secondary:active {
-    background-color: #9f74f0;
+    background-color: #AABF96;
     transform: scale(1.1);
 }
 
-/* Container padding for mobile devices */
 .container {
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-/* Responsive tweaks */
 @media (max-width: 767px) {
     .container {
         padding-left: 0.5rem;
