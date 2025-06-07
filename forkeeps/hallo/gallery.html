@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery for Honey ko 💙</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #e6f7ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 15px;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 40px 0 30px;
+            color: #69c7f0;
+            font-weight: 700;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .photo-container {
+            flex: 1 1 320px;
+            max-width: 320px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgb(105 199 240 / 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .photo-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 24px rgb(105 199 240 / 0.5);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .photo-message {
+            font-size: 1rem;
+            color: #338fcc;
+            font-weight: 600;
+        }
+
+        .btn-custom {
+            background-color: #69c7f0;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: block;
+            width: 150px;
+            margin: 0 auto 40px auto;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn-custom:hover {
+            background-color: #4aa3d6;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hearts animation styles */
+        .heart {
+            width: 15px;
+            height: 15px;
+            position: fixed;
+            bottom: 0;
+            background-color: #ff6b81;
+            transform: rotate(45deg);
+            animation: floatUp 6s linear infinite;
+            opacity: 0.7;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-color: #ff6b81;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -7.5px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: -7.5px;
+            top: 0;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1) rotate(45deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-800px) scale(0.5) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 680px) {
+            .photos {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .photo-container {
+                max-width: 90vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const body = document.body;
+            for (let i = 0; i < 25; i++) {
+                const heart = document.createElement("div");
+                heart.className = "heart";
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.animationDelay = `${Math.random() * 10}s`;
+                heart.style.animationDuration = `${4 + Math.random() * 4}s`;
+                body.appendChild(heart);
+            }
+        });
+    </script>
+
+    <h1>Gallery for Honey ko 💙</h1>
+
+    <div class="photos">
+        <div class="photo-container">
+            <img src="Us1.jpg" alt="Photo 1" />
+            <div class="photo-message">mwhehehhehhehheeheheehe</div>
+        </div>
+        <div class="photo-container">
+            <img src="Us2.jpg" alt="Photo 2" />
+            <div class="photo-message">🙈🙈🙈</div>
+        </div>
+    </div>
+
+    <a href="about.html" class="btn-custom">See Next</a>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey ko</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #e6f7ff;
+            font-family: 'Segoe UI', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .centered-text {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .btn-custom {
+            background-color: #69c7f0;
+            border: none;
+            color: white;
+        }
+
+        .heart {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            background-color: #ff6b81;
+            transform: rotate(45deg);
+            animation: floatUp 6s linear infinite;
+            opacity: 0.7;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-color: #ff6b81;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -7.5px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: -7.5px;
+            top: 0;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1) rotate(45deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-800px) scale(0.5) rotate(45deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const body = document.body;
+            for (let i = 0; i < 25; i++) {
+                const heart = document.createElement("div");
+                heart.className = "heart";
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.animationDelay = `${Math.random() * 10}s`;
+                heart.style.animationDuration = `${4 + Math.random() * 4}s`;
+                body.appendChild(heart);
+            }
+        });
+    </script>
+    <div class="centered-text">
+        <h1>Hello Honey ko 💙</h1>
+        <p class="lead">It's been a while since the last time I created a website for you, Honey ko. I want this to be
+            different this time.</p>
+        <a href="thankyou.html" class="btn btn-custom mt-3">See Next</a>
+    </div>
+</body>
+
+</html>
