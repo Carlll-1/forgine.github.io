@@ -1,0 +1,56 @@
+:root {
+  --pink-main: #FFC8DD;
+}
+
+/* Custom Pink Buttons */
+.btn-pink {
+  background-color: var(--pink-main);
+  border-color: var(--pink-main);
+  color: #fff;
+}
+
+.btn-pink:hover,
+.btn-pink:focus {
+  background-color: #ffa8cc;
+  border-color: #ffa8cc;
+  color: #fff;
+}
+
+.btn-outline-pink {
+  color: var(--pink-main);
+  border-color: var(--pink-main);
+}
+
+.btn-outline-pink:hover,
+.btn-outline-pink:focus {
+  background-color: var(--pink-main);
+  color: #fff;
+}
+
+/* --- Hover & transition effects --- */
+a.nav-link,
+.navbar-brand,
+.btn,
+.card {
+  transition: all .3s ease;
+}
+
+/* Navbar links */
+a.nav-link:hover,
+.navbar-brand:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* Pink buttons */
+.btn-pink:hover,
+.btn-outline-pink:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+/* Cards */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 .8rem 1.4rem rgba(0, 0, 0, .20);
+}
