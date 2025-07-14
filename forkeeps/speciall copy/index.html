@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A heartfelt letter for Honey Ko">
+  <title>For Honey Kooo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light-green">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">🌿 Honey Ko</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="appreciation.html">Appreciation</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <audio id="bgMusic" src="romantic.mp3" autoplay loop></audio>
+  <button id="musicToggle" class="btn btn-light-green rounded-circle shadow" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">🔊</button>
+
+  <section class="letter py-5">
+    <div class="container">
+      <div class="card p-4 shadow rounded">
+        <h2 class="text-center mb-4 fw-bold">To My Honey Ko 🌸</h2>
+        <p class="lead text-center">
+          Thank you for being such a strong and beautiful soul these past few days.  
+          I see all the effort you give—not just for us, but for your family, your friends, and yourself.  
+          Your strength and kindness inspire me every single day. 💚
+        </p>
+        <p class="lead text-center">
+          I’m so proud of how you handle everything with so much love and courage.  
+          I feel so lucky to be loved by someone as amazing as you. ❤️
+        </p>
+        <p class="lead text-center">
+          Always remember, no matter what happens, I’ll always be here for you. Through every high and every low,  
+          your Taten will never leave your side. 🌿
+        </p>
+        <p class="lead text-center fw-bold mt-4">With all my love, <br><span style="font-size: 1.5rem;">Taten ❤️</span></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-4">
+    <p class="mb-0">For my one and only, <strong>Honey Ko ❤️</strong></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const bgMusic = document.getElementById('bgMusic');
+    const musicToggle = document.getElementById('musicToggle');
+
+    musicToggle.addEventListener('click', () => {
+      if (bgMusic.paused) {
+        bgMusic.play();
+        musicToggle.textContent = '🔊';
+      } else {
+        bgMusic.pause();
+        musicToggle.textContent = '🔇';
+      }
+    });
+  </script>
+</body>
+</html>

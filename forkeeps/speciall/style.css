@@ -1,0 +1,94 @@
+/* Fonts and Colors */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #344e41;
+  background-color: #f1f8f4;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2e4632;
+}
+
+.bg-light-green {
+  background-color: #dbeedb !important;
+}
+
+.btn-light-green {
+  background-color: #a3d9a5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-light-green:hover {
+  background-color: #8ccf90;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.hero {
+  height: 90vh;
+  background: linear-gradient(to right, #e6f7e6, #f0fef0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  background-color: #dbeedb;
+  color: #344e41;
+}
+
+/* Thank-You Card Styling */
+#thank-you .card {
+  background: linear-gradient(135deg, #f0fef0, #dbeedb);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #2e4632;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+#thank-you .card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+#thank-you .card h3::after {
+  content: " 💖";
+  animation: heartbeat 1.5s infinite;
+}
+
+#thank-you .card p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#thank-you .card strong, #thank-you .card em {
+  color: #4e7d4e;
+}
+
+#thank-you .card p.lead::before {
+  content: "🌸 ";
+}
+
+#thank-you .card p.lead:nth-of-type(2)::before {
+  content: "🌿 ";
+}
+
+#thank-you .card p.lead:nth-of-type(3)::before {
+  content: "❤️ ";
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}

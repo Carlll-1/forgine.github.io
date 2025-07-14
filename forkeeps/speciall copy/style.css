@@ -1,0 +1,54 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #344e41;
+  background-color: #f1f8f4;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2e4632;
+}
+
+.bg-light-green {
+  background-color: #dbeedb !important;
+}
+
+.btn-light-green {
+  background-color: #a3d9a5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-light-green:hover {
+  background-color: #8ccf90;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.letter .card {
+  background: linear-gradient(135deg, #f0fef0, #dbeedb);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #2e4632;
+}
+
+footer {
+  background-color: #dbeedb;
+  color: #344e41;
+}
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+}
