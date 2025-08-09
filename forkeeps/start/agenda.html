@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agenda — Gineeee 🌅</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: #f5e6d3;
+      --accent: #5a4634;
+      --muted: #7a6a58;
+    }
+    body {
+      background-color: var(--primary-bg);
+      color: var(--accent);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      padding: 2rem;
+      animation: slideUp 1s ease-in-out;
+    }
+    @keyframes slideUp {
+      from {transform: translateY(30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    .agenda-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 10px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.02);
+      transition: transform 0.2s;
+    }
+    .agenda-item:hover {
+      transform: scale(1.02);
+    }
+    .dot {
+      min-width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.05);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .note {
+      background: rgba(255, 255, 255, 0.7);
+      border-left: 4px solid #d4a373;
+      padding: 12px;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <div class="card">
+      <h1 class="fw-bold text-center mb-4">Our Agenda 💛</h1>
+      <div class="agenda-item mb-3">
+        <div class="dot">1</div>
+        <div>Attend mass ⛪</div>
+      </div>
+      <div class="agenda-item mb-3">
+        <div class="dot">2</div>
+        <div>Eat Lomi in Tanauan or wherever you like 🍜</div>
+      </div>
+      <div class="agenda-item mb-3">
+        <div class="dot">3</div>
+        <div>Have a short talk while watching the sunset at Baywalk 🌅</div>
+      </div>
+      <div class="note">
+        Any outfit is perfect as long as you're comfy. Just be yourself — your presence will be more than enough.  
+        I promise you'll be home on or before 7pm, safe and happy.
+      </div>
+      <div class="text-center mt-4">
+        <a href="index.html" class="btn btn-secondary">Back</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
