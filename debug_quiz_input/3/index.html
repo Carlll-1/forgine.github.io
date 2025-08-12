@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chapter 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #97e0f4, #d9f1fa);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        h1 {
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .card {
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background-color: #aecef9;
+            border: none;
+            width: 100%;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #155ab6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-4" style="background: linear-gradient(90deg, #8ab1e3, #4fc3f7); color: white;">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">Chapter 2</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <div class="row g-4">
+
+            <!-- Video Template -->
+            <script>
+                const videos = [
+                    { id: "SciA8YS1M5o", title: "Energy Transport by Heat and Work" },
+                    { id: "RgPLbYhfBYw", title: "Classical sign convertion" },
+                    { id: "bRZwzy0xvhM", title: "Basic Heat Transfer" },
+                    { id: "AyGMr43cuoQ", title: "Electrical Work" },
+                    { id: "lpTLqu4a3wQ", title: "Mechanical Forms" },
+                    { id: "O7HwhkYt6YU", title: "First Law of Thermo" },
+                    { id: "ReqCO4syU28", title: "The first law and the conservation of energy" },
+                    { id: "VMFQEWumeeU", title: "Energy Conversion Efficiencies" },
+                    { id: "eHhQ3VkQHeU", title: "Efficiancy of Thermo" },
+                    { id: "q5vgBPb8gSc", title: "Combustion Engine" }
+                ];
+                document.addEventListener("DOMContentLoaded", () => {
+                    const row = document.querySelector(".row.g-4");
+                    videos.forEach(v => {
+                        row.innerHTML += `
+                            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                                <div class="card h-100 shadow-sm">
+                                    <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank">
+                                        <img src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" class="card-img-top" alt="${v.title}">
+                                    </a>
+                                    <div class="card-body">
+                                        <h6 class="card-title">${v.title}</h6>
+                                        <a target="_blank" href="https://www.youtube.com/watch?v=${v.id}" class="btn btn-primary">Click to open</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
