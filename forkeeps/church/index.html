@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Message for Gineeee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fdf8f4;
+            --accent: #a888b5;
+            --accent-hover: #9370a6;
+            --text-color: #5f4b66;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .envelope {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.8s ease, opacity 0.8s ease;
+            max-width: 320px;
+        }
+
+        .envelope img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: scale(0.5);
+            pointer-events: none;
+        }
+
+        .open-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 50px;
+            margin-top: 15px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .open-btn:hover {
+            background-color: var(--accent-hover);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="envelope" id="envelope">
+        <img src="teary1.gif" alt="Teary-eyed">
+        <h5 class="mt-3">Hey Gineeee 💌</h5>
+        <p>Click to open — I have something to ask you!</p>
+        <button class="open-btn" onclick="openEnvelope()">Click to Opennn</button>
+    </div>
+
+    <script>
+        function openEnvelope() {
+            const env = document.getElementById('envelope');
+            env.classList.add('hidden');
+            setTimeout(() => {
+                window.location.href = "agenda.html";
+            }, 800);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda for Gineeee</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-bg: #fff8f4;
+      --accent: #a888b5;
+      --accent-hover: #9370a6;
+      --muted: #5f4b66;
+    }
+    body {
+      background-color: var(--primary-bg);
+      color: var(--muted);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    .agenda-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 10px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.02);
+    }
+    .dot {
+      min-width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.05);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .note {
+      background: rgba(255, 255, 255, 0.7);
+      border-left: 4px solid var(--accent);
+      padding: 12px;
+      border-radius: 10px;
+    }
+    .btn-pastel {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 24px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .btn-pastel:hover {
+      background-color: var(--accent-hover);
+      transform: scale(1.05);
+    }
+    .btn-outline-pastel {
+      background-color: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      border-radius: 50px;
+      padding: 10px 24px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    }
+    .btn-outline-pastel:hover {
+      background-color: var(--accent);
+      color: white;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<div class="card p-4">
+  <h3 class="text-center mb-3">💌 For Gineeee 💌</h3>
+  <p class="text-center">Hi Gineeee, any outfit is fine as long as you’re comfy. Just be yourself — your presence would be gladly appreciated. I promise to get you home before 5 PM, safe and happy. ❤️</p>
+  
+  <h5 class="mt-4">Agenda 📅</h5>
+  <div class="agenda-item mt-2">
+    <div class="dot">1</div>
+    <div>Sunday, Aug 17 — 11:00 AM Mass</div>
+  </div>
+  <div class="agenda-item mt-2">
+    <div class="dot">2</div>
+    <div>Quick lunch (lomi in Tanauan, but Taten has other options if you prefer other foods.)</div>
+  </div>
+  <div class="agenda-item mt-2">
+    <div class="dot">3</div>
+    <div>Let’s pray before your midterm exam comes 🙏</div>
+  </div>
+
+
+
+  <div class="mt-4 d-flex gap-2">
+    <button class="btn-pastel flex-fill" id="rsvp">Yes, I’m in!</button>
+  </div>
+</div>
+
+<script>
+  document.getElementById("rsvp").addEventListener("click", function() {
+    alert("Yay! Can’t wait to see you ❤️");
+  });
+</script>
+
+</body>
+</html>
