@@ -1,0 +1,77 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fdfaff;
+    color: #444;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(130, 100, 200, 0.5), rgba(130, 100, 200, 0.5)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center/cover;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.text-purple {
+    color: #7c4d9c;
+}
+
+.bg-lightpurple {
+    background-color: #f5eaff;
+}
+
+.btn-purple {
+    background-color: #a37cc3;
+    color: #fff;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-purple:hover {
+    background-color: #8e62b9;
+    transform: scale(1.05);
+}
+
+.btn-outline-purple {
+    border: 2px solid #a37cc3;
+    color: #a37cc3;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-purple:hover {
+    background-color: #a37cc3;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.animate-fade-delay {
+    animation: fadeIn 2.5s ease forwards;
+}
+
+.animate-pop {
+    transform: scale(0.9);
+    opacity: 0;
+    animation: popIn 1s forwards;
+}
+
+@keyframes popIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
