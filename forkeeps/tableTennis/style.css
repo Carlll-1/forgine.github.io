@@ -1,0 +1,38 @@
+body {
+    background-color: #f0f8ff;
+    /* very light blue */
+}
+
+.bg-lightblue {
+    background: linear-gradient(135deg, #e0f7ff, #f8fcff);
+}
+
+.animate-fade {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
